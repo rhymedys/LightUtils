@@ -1,7 +1,7 @@
 import * as utils from '../../../src/utils/TypeUtils'
 
 describe('utils', () => {
-  it('can tell if a variable _getObjectType pass', () => {
+  it('can tell if a function _getObjectType pass', () => {
     const obj = { foo: 'bar' }
     const arr = [ 1, 2, 3 ]
     const primary = 123
@@ -17,7 +17,7 @@ describe('utils', () => {
     expect(utils._getObjectType(testFunction)).toBe('[object Function]')    
   })
 
-  it('can tell if a variable _checkObjectType pass', () => {
+  it('can tell if a function _checkObjectType pass', () => {
     const obj = { foo: 'bar' }
     const arr = [ 1, 2, 3 ]
     const primary = 123

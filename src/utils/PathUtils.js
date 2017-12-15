@@ -2,7 +2,7 @@
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-15 15:52:08 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-15 16:46:00
+ * @Last Modified time: 2017-12-15 17:59:57
  */
 
 /**
@@ -15,9 +15,10 @@ function _getUrlPathByGrade(strUrl, grade) {
     let res = `${arrUrl[0]}/`
     if (arrUrl[1]) {
       let splitUrl = arrUrl[1].split('/')
-      for (const i of grade) {
+      for (let i = 0; i < grade; i++) {
         res += `/${splitUrl[i]}`
       }
+
     } else {
       res += '/'
     }
@@ -33,8 +34,8 @@ function _getUrlPathByGrade(strUrl, grade) {
  */
 function _replaceUrlProtocal2CurrentProtocal(strUrl, needProtocal) {
   if (strUrl) {
-    let toReplacePart = strUrl.substring(0, strUrl.indexOf('://'))
-    return strUrl.replace(toReplacePart, needProtocal ? window.location.protocol : '')
+    let toReplacePart = strUrl.substring(0, strUrl.indexOf('://')+3)
+    return strUrl.replace(toReplacePart, needProtocal ? `${window.location.protocol}//` : '')
   }
 }
 
@@ -43,7 +44,7 @@ function _replaceUrlProtocal2CurrentProtocal(strUrl, needProtocal) {
  * @param {any} str 
  */
 function _isUrl(str) {
-  return /^(http?s|\/\/)/.test(str)
+  return /^(http(s)?|\/\/)/.test(str)
 }
 
 export {
