@@ -17,7 +17,7 @@ const configs = {
     dest: path.resolve(__dirname, `../test/e2e/${libName}-${version}.js`),
     format: 'umd',
     banner,
-    moduleName,
+    moduleName:'CcUtils',
     plugins: [
       buble()
     ]
@@ -27,7 +27,7 @@ const configs = {
     dest: path.resolve(__dirname, `../lib/${libName}-${version}.js`),
     format: 'umd',
     banner,
-    moduleName,
+    moduleName:'CcUtils',
     plugins: [
       buble()
     ]
