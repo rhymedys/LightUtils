@@ -2,7 +2,7 @@
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-15 15:14:06 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-15 16:46:30
+ * @Last Modified time: 2017-12-15 18:07:08
  */
 
 import {
@@ -29,7 +29,7 @@ export default {
   _getDayByDate,
   _getDateByTimestamp,
   _getCurrentDate,
-
+  
   // TypeUtils
   _checkObjectType,
   _getObjectType,
