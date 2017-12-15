@@ -6,3 +6,4 @@ node_modules
 test/e2e/bowl.js
 notes.md
 /.svn
+.vscode/settings.json
