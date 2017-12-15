@@ -2,7 +2,7 @@
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-15 15:14:01 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-15 18:08:43
+ * @Last Modified time: 2017-12-15 21:19:04
  */
 
 const defaultDateFormatType = 'yyyy-MM-dd hh:mm:ss'
@@ -54,7 +54,7 @@ function injectDateFormatToDateAndCallback(cb) {
  */
  function _getWeekDayByDate(strDate) {
   const day = ['日', '一', '二', '三', '四', '五', '六']
-  return `周${day[new Date(Date.parse(strDate.replace(/-/g, '/')))]}`
+  return `周${day[new Date(Date.parse(strDate.replace(/-/g, '/'))).getDay()]}`
 }
 
 /**
@@ -64,7 +64,7 @@ function injectDateFormatToDateAndCallback(cb) {
  */
  function _getDayByDate(strDate) {
   const day = ['天', '一', '二', '三', '四', '五', '六']
-  return `星期${day[new Date(Date.parse(strDate.replace(/-/g, '/')))]}`
+  return `星期${day[new Date(Date.parse(strDate.replace(/-/g, '/'))).getDay()]}`
 }
 
 /**
@@ -74,7 +74,7 @@ function injectDateFormatToDateAndCallback(cb) {
  * @returns 
  */
  function _getDateByTimestamp(numTimestamp, formatType) {
-  return injectDateFormatToDateAndCallback(new Date(numTimestamp).format(formatType || defaultDateFormatType))
+  return injectDateFormatToDateAndCallback(()=>new Date(numTimestamp).format(formatType || defaultDateFormatType))
 }
 
 /**
@@ -83,7 +83,7 @@ function injectDateFormatToDateAndCallback(cb) {
  * @returns 
  */
  function _getCurrentDate(formatType) {
-  return injectDateFormatToDateAndCallback(new Date().format(formatType || defaultDateFormatType))
+  return injectDateFormatToDateAndCallback(()=>new Date().format(formatType || defaultDateFormatType))
 }
 
 

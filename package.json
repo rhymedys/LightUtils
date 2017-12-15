@@ -28,6 +28,7 @@
     "karma": "^1.7.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-jasmine": "^1.1.1",
+    "karma-webpack": "^1.8.0",
     "loader-utils": "^0.2.15",
     "rollup": "^0.36.3",
     "rollup-plugin-buble": "^0.14.0",
