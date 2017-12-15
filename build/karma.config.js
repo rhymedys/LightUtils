@@ -5,7 +5,7 @@ let webpackConfig = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/
       }
     ]
@@ -41,8 +41,10 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      '../test/**/*.js': [ 'webpack' ]
+      '../test/**/*.js': [ 'webpack' ],
+      '../src/*.js': 'coverage'
     },
+
 
     webpack: webpackConfig,
 
@@ -50,9 +52,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
-
-
+    reporters: ['progress','coverage'],
     // web server port
     port: 9876,
 
@@ -82,6 +82,11 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
+    concurrency: Infinity,
+
+    coverageReporter: {
+      type : 'html',
+      dir : '../report/coverageReporter'
+    }
   })
 }

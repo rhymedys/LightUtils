@@ -2,7 +2,7 @@
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-15 15:14:01 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-15 21:19:04
+ * @Last Modified time: 2017-12-15 22:14:04
  */
 
 const defaultDateFormatType = 'yyyy-MM-dd hh:mm:ss'
@@ -87,7 +87,7 @@ function injectDateFormatToDateAndCallback(cb) {
 }
 
 
- export {
+ export default{
   _injectDateFormatToDate,
   _getWeekDayByDate,
   _getDayByDate,

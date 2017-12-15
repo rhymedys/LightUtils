@@ -2,7 +2,7 @@
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-15 15:52:08 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-15 17:59:57
+ * @Last Modified time: 2017-12-15 22:14:11
  */
 
 /**
@@ -47,7 +47,7 @@ function _isUrl(str) {
   return /^(http(s)?|\/\/)/.test(str)
 }
 
-export {
+export default {
   _replaceUrlProtocal2CurrentProtocal,
   _isUrl,
   _getUrlPathByGrade

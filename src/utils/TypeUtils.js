@@ -2,7 +2,7 @@
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-15 15:57:15 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-15 17:26:16
+ * @Last Modified time: 2017-12-15 22:14:17
  */
 
 function generateType(type) {
@@ -40,7 +40,7 @@ function _checkObjectType(obj, typeCallback) {
   }
 }
 
-export {
+export default{
   _checkObjectType,
   _getObjectType
 }
