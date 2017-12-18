@@ -2,20 +2,18 @@ const webpack = require('webpack');
 
 let webpackConfig = {
   module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
-      }
-    ]
+    rules: [{
+      test: /\.js$/,
+      loader: 'babel-loader',
+      exclude: /node_modules/
+    }]
   }
 };
 
 // Karma configuration
 // Generated on Tue Nov 01 2016 17:43:02 GMT+0800 (CST)
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -34,15 +32,21 @@ module.exports = function(config) {
 
 
     // list of files to exclude
-    exclude: [
+    exclude: [],
+    plugins: [
+      'karma-jasmine',
+      'karma-mocha-reporter',
+      'karma-sourcemap-loader',
+      'karma-webpack',
+      'karma-coverage',
+      'karma-chrome-launcher'
     ],
-
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      '../test/**/*.js': [ 'webpack' ],
-      '../src/*.js': 'coverage'
+      '../test/unit/index.js': ['webpack'],
+      // '../src/**/*.js': ['coverage']
     },
 
 
@@ -52,7 +56,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress','coverage'],
+    reporters: ['coverage','mocha'],
     // web server port
     port: 9876,
 
@@ -85,8 +89,8 @@ module.exports = function(config) {
     concurrency: Infinity,
 
     coverageReporter: {
-      type : 'html',
-      dir : '../report/coverageReporter'
+      type: 'html',
+      dir: '../report/coverageReporter'
     }
   })
 }
