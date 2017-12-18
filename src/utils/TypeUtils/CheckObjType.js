@@ -2,7 +2,7 @@
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-16 15:33:08 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-16 15:35:37
+ * @Last Modified time: 2017-12-18 10:14:24
  */
 import _getObjectType from './GetObjectType'
 
@@ -27,7 +27,7 @@ const type = {
  * @param {any} typeCallback 匹配类型  
  * @returns 
  */
- export default function (obj, typeCallback) {
+ export default function _checkObjType (obj, typeCallback) {
   if (_getObjectType(typeCallback) === type.Function) {
     return _getObjectType(obj) === typeCallback(type)
   }

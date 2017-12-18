@@ -2,34 +2,34 @@
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-15 15:14:06
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-16 17:03:43
+ * @Last Modified time: 2017-12-18 13:42:09
  */
 
 //  PathUtils
 import _replaceUrlProtocal2CurrentProtocal from './utils/PathUtils/ReplaceUrlProtocal2CurrentProtocal'
-import _isUrl from './utils/PathUtils/IsUrl'
-import _getUrlPathByGrade from './utils/PathUtils/GetUrlPathByGrade'
-import _getURLProtocol from './utils/PathUtils/GetURLProtocol'
-import _getUrlQuery from './utils/PathUtils/GetUrlQuery'
-import _query2Json from './utils/PathUtils/Query2Json'
+ import _isUrl from './utils/PathUtils/IsUrl'
+ import _getUrlPathByGrade from './utils/PathUtils/GetUrlPathByGrade'
+ import _getURLProtocol from './utils/PathUtils/GetURLProtocol'
+ import _getUrlQuery from './utils/PathUtils/GetUrlQuery'
+ import _query2Json from './utils/PathUtils/Query2Json'
 
 
 // TimeUtils
-import _injectDateFormatToDate from './utils/TimeUtils/InjectDateFormatToDate'
-import _getWeekDayByDate from './utils/TimeUtils/GetWeelDayByDate'
-import _getDayByDate from './utils/TimeUtils/GetDayByDate'
-import _getDateByTimestamp from './utils/TimeUtils/GetDateByTimestamp'
-import _getCurrentDate from './utils/TimeUtils/GetCurrentDate'
+ import _injectDateFormatToDate from './utils/TimeUtils/InjectDateFormatToDate'
+ import _getWeekDayByDate from './utils/TimeUtils/GetWeekDayByDate'
+ import _getDayByDate from './utils/TimeUtils/GetDayByDate'
+ import _getDateByTimestamp from './utils/TimeUtils/GetDateByTimestamp'
+ import _getCurrentDate from './utils/TimeUtils/GetCurrentDate'
 
 //  TypeUtils
-import _checkObjectType from './utils/TypeUtils/CheckObjType'
-import _getObjectType from './utils/TypeUtils/GetObjectType'
+ import _checkObjType from './utils/TypeUtils/CheckObjType'
+ import _getObjectType from './utils/TypeUtils/GetObjectType'
 
 // ObjectUtils
-import _removeItemFromObject from './utils/ObjectUtils/RemoveItemFromObj'
+ import _removeItemFromObject from './utils/ObjectUtils/RemoveItemFromObj'
 
 // SysUtils
-import _getUserAgent from './utils/SysUtils/GetUserAgent'
+ import _getUserAgent from './utils/SysUtils/GetUserAgent'
 
 export default {
   // PathUtils
@@ -48,7 +48,7 @@ export default {
   _getCurrentDate,
 
   // TypeUtils
-  _checkObjectType,
+  _checkObjType,
   _getObjectType,
 
   // ObjectUtils

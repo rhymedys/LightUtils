@@ -2,13 +2,13 @@
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-16 15:37:02
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-16 15:37:27
+ * @Last Modified time: 2017-12-18 10:02:37
  */
 
 /**
  * @description 对Date对象注入Format方法
  */
-export default function () {
+export default function _injectDateFormatToDate(){
   Date.prototype.format = function (fmt) {
     const o = {
       'M+': this.getMonth() + 1,

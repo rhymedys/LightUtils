@@ -13,21 +13,26 @@ const banner =
 
 const configs = {
   'dev': {
-    entry: path.resolve(__dirname, '../src/index.js'),
-    dest: path.resolve(__dirname, `../test/e2e/${libName}-${version}.js`),
-    format: 'umd',
-    banner,
-    moduleName:'CcUtils',
+    input: path.resolve(__dirname, '../src/index.js'),
+    output: {
+      file: path.resolve(__dirname, `../lib/${libName}-${version}.js`),
+      format:'umd',
+      banner,
+      name: 'CcUtils'
+    },
     plugins: [
       buble()
     ]
   },
   'production': {
-    entry: path.resolve(__dirname, '../src/index.js'),
-    dest: path.resolve(__dirname, `../lib/${libName}-${version}.js`),
-    format: 'umd',
-    banner,
-    moduleName:'CcUtils',
+    input: path.resolve(__dirname, '../src/index.js'),
+    output: {
+      file: path.resolve(__dirname, `../lib/${libName}-${version}.js`),
+      format:'umd',
+      banner,
+      name: 'CcUtils',
+      env: 'production'
+    },  
     plugins: [
       buble()
     ]
@@ -37,5 +42,5 @@ const configs = {
 if (process.env.TARGET) {
   module.exports = configs[process.env.TARGET];
 } else {
-  module.exports = configs['production'];
+  module.exports =configs['production'];
 }

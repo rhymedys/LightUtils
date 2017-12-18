@@ -1,8 +1,8 @@
 /*
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-16 15:30:15 
- * @Last Modified by:   Rhymedys 
- * @Last Modified time: 2017-12-16 15:30:15 
+ * @Last Modified by: Rhymedys
+ * @Last Modified time: 2017-12-18 09:59:49
  */
 
  /**
@@ -11,7 +11,7 @@
  * @param {any} needProtocal 
  * @returns 
  */
-export default function (strUrl, needProtocal) {
+export default function _replaceUrlProtocal2CurrentProtocal (strUrl, needProtocal) {
   if (strUrl) {
     let toReplacePart = strUrl.substring(0, strUrl.indexOf('://')+3)
     return strUrl.replace(toReplacePart, needProtocal ? `${window.location.protocol}//` : '')

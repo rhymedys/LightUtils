@@ -2,10 +2,10 @@
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-16 17:02:07
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-16 17:02:42
+ * @Last Modified time: 2017-12-18 10:02:03
  */
 
-export default function () {
+export default function _getUserAgent () {
   const u = navigator.userAgent
   return {
     trident: u.indexOf('Trident') > -1, // IE内核

@@ -24,9 +24,8 @@ function write(dest, code) {
 }
 
 function build() {
-  rollup.rollup(config).then(bundle => {
-    const code = bundle.generate(config).code;
-    const minified = (config.banner ? `${config.banner}\n` : '') + uglify.minify(code, {
+  rollup.rollup(config).then(bundle =>  bundle.generate(config.output)).then(({code})=>{
+    const minified = (config.output.banner ? `${config.output.banner}\n` : '') + uglify.minify(code, {
       fromString: true,
       output: {
         screw_ie8: true,
@@ -37,8 +36,8 @@ function build() {
     if (!fs.existsSync(libPath)) {
       fs.mkdirSync(libPath);
     }
-    write(config.dest, code);
-    write(config.dest.replace(/\.js$/, '.min.js'), minified);
+    write(config.output.file, code);
+    return write(config.output.file.replace(/\.js$/, '.min.js'), minified);
   });
 }
 

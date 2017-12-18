@@ -18,7 +18,7 @@ describe('TypeUtils', () => {
     expect(utils._getObjectType(testFunction)).toBe('[object Function]')
   })
 
-  it('can tell if a function _checkObjectType pass', () => {
+  it('can tell if a function _checkObjType pass', () => {
     const obj = {
       foo: 'bar'
     }
@@ -27,13 +27,13 @@ describe('TypeUtils', () => {
     const str = '123'
     const testFunction = function () {}
 
-    expect(utils._checkObjectType(str, type => type.String)).toBe(true)
-    expect(utils._checkObjectType(obj, type => type.Object)).toBe(true)
-    expect(utils._checkObjectType(arr, type => type.Array)).toBe(true)
-    expect(utils._checkObjectType(primary, type => type.Number)).toBe(true)
-    expect(utils._checkObjectType(new Date(), type => type.Date)).toBe(true)
-    expect(utils._checkObjectType(true, type => type.Boolean)).toBe(true)
-    expect(utils._checkObjectType(testFunction, type => type.Function)).toBe(true)
+    expect(utils._checkObjType(str, type => type.String)).toBe(true)
+    expect(utils._checkObjType(obj, type => type.Object)).toBe(true)
+    expect(utils._checkObjType(arr, type => type.Array)).toBe(true)
+    expect(utils._checkObjType(primary, type => type.Number)).toBe(true)
+    expect(utils._checkObjType(new Date(), type => type.Date)).toBe(true)
+    expect(utils._checkObjType(true, type => type.Boolean)).toBe(true)
+    expect(utils._checkObjType(testFunction, type => type.Function)).toBe(true)
 
   })
 })

@@ -2,7 +2,7 @@
 node_modules
 .idea
 *.log
-
+/report/*
 test/e2e/bowl.js
 notes.md
 /.svn
