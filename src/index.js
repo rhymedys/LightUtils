@@ -2,7 +2,7 @@
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-15 15:14:06
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-18 15:04:03
+ * @Last Modified time: 2017-12-20 17:05:45
  */
 
 //  PathUtils
@@ -31,6 +31,9 @@ import _replaceUrlProtocal2CurrentProtocal from './utils/PathUtils/ReplaceUrlPro
 // SysUtils
  import _getUserAgent from './utils/SysUtils/GetUserAgent'
 
+//  ApiUtils
+import _generateApiObjFromArr from './utils/ApiUtils/GenerateApiObjByArr'
+
 export default {
   // PathUtils
   _replaceUrlProtocal2CurrentProtocal,
@@ -55,5 +58,8 @@ export default {
   _removeItemFromObject,
 
   // SysUtils
-  _getUserAgent
+  _getUserAgent,
+
+  // ApiUtils
+  _generateApiObjFromArr
 }
