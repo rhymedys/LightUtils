@@ -2,7 +2,7 @@
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-15 15:14:06
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-20 17:22:21
+ * @Last Modified time: 2017-12-21 19:47:48
  */
 
 //  PathUtils
@@ -32,10 +32,15 @@ import _removeItemFromObject from './utils/ObjectUtils/RemoveItemFromObj'
 import _getUserAgent from './utils/SysUtils/GetUserAgent'
 import _generateGUID from './utils/SysUtils/GenerateGUID'
 import _generateUUID from './utils/SysUtils/GenerateUUID'
-
+import _isColor from './utils/SysUtils/IsColor'
+import _isIdentity from './utils/SysUtils/IsIdentity'
+import _isPhoneNum from './utils/SysUtils/IsPhoneNum'
 
 //  ApiUtils
 import _generateApiObjFromArr from './utils/ApiUtils/GenerateApiObjByArr'
+
+// ImgUtils
+import _converImgToBase64 from './utils/ImgUtils/ConvertImgToBase64'
 
 export default {
   // PathUtils
@@ -64,7 +69,13 @@ export default {
   _getUserAgent,
   _generateGUID,
   _generateUUID,
+  _isColor,
+  _isIdentity,
+  _isPhoneNum,
 
   // ApiUtils
-  _generateApiObjFromArr
+  _generateApiObjFromArr,
+
+  // ImgUtils
+  _converImgToBase64
 }
