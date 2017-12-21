@@ -5,6 +5,7 @@ const uglify = require('uglify-js');
 const config = require('./config');
 const version = require('../package.json').version;
 
+
 function getSize(str) {
   return (str.length / 1024).toFixed(2) + 'kb';
 }
@@ -14,8 +15,8 @@ function blue(str) {
 }
 
 function write(dest, code) {
-  return new Promise(function(resolve, reject) {
-    fs.writeFile(dest, code, function(err) {
+  return new Promise(function (resolve, reject) {
+    fs.writeFile(dest, code, function (err) {
       if (err) return reject(err);
       console.log(blue(path.relative(process.cwd(), dest)) + ' ' + getSize(code));
       resolve();
@@ -24,7 +25,33 @@ function write(dest, code) {
 }
 
 function build() {
-  rollup.rollup(config).then(bundle =>  bundle.generate(config.output)).then(({code})=>{
+  rollup.rollup(config).then(bundle => {
+    let manifest = {}
+    bundle.modules.forEach((val) => {
+      let filterAst = val.id.match(new RegExp(/\\utils\\(.*?).js/g))
+      if(filterAst){
+        let originKey=filterAst[0].substring(filterAst[0].lastIndexOf('\\')+1,filterAst[0].lastIndexOf('.'))
+
+        manifest[originKey]=filterAst[0].substring(filterAst[0].indexOf('\\')+1,filterAst[0].length)
+        // manifest[originKey]
+        
+      }
+
+
+
+      // console.log(filterAst)
+      // let key=filterAst[3].replace(/.js/,'')
+      // console.log(key)
+
+
+
+    })
+
+    write(config.output.manifestFile, JSON.stringify(manifest));
+    return bundle.generate(config.output)
+  }).then(({
+    code
+  }) => {
     const minified = (config.output.banner ? `${config.output.banner}\n` : '') + uglify.minify(code, {
       fromString: true,
       output: {
@@ -42,4 +69,3 @@ function build() {
 }
 
 build();
-
