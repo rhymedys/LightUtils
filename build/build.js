@@ -32,19 +32,8 @@ function build() {
       if(filterAst){
         let originKey=filterAst[0].substring(filterAst[0].lastIndexOf('\\')+1,filterAst[0].lastIndexOf('.'))
 
-        manifest[originKey]=filterAst[0].substring(filterAst[0].indexOf('\\')+1,filterAst[0].length)
-        // manifest[originKey]
-        
+        manifest[originKey]=filterAst[0].substring(filterAst[0].indexOf('\\')+1,filterAst[0].length)        
       }
-
-
-
-      // console.log(filterAst)
-      // let key=filterAst[3].replace(/.js/,'')
-      // console.log(key)
-
-
-
     })
 
     write(config.output.manifestFile, JSON.stringify(manifest));
