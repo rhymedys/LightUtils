@@ -40,4 +40,9 @@ describe('PathUtils', () => {
     expect(utils._query2Json(test2).abc).toBe(undefined)
   })
 
+
+  it('can tell if a function _removeProtocol pass', () => {
+    expect(utils._removeProtocol(test1)).toBe('//github.com/karma-runner/karma?abc=123')
+    expect(utils._removeProtocol(test2)).toBe('//github.com/karma-runner/karma')
+  })
 })
