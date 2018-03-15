@@ -2,7 +2,7 @@
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-16 17:02:07
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-18 10:02:03
+ * @Last Modified time: 2018-03-15 13:14:23
  */
 
 export default function _getUserAgent () {
@@ -21,6 +21,7 @@ export default function _getUserAgent () {
     weixin: u.indexOf('MicroMessenger') > -1, // 是否微信 （2015-01-22新增）
     qq: u.match(/\sQQ/i) == ' qq', // 是否QQ
     mydoctor: u.indexOf('Mydoctor') > -1,
-    wechatdevtools: u.indexOf('wechatdevtools') > -1
+    wechatdevtools: u.indexOf('wechatdevtools') > -1,
+    kingdeeHit: u.indexOf('KingdeeHit') > -1 
   }
 }

@@ -19,7 +19,7 @@ const configs = {
       format:'umd',
       banner,
       name: 'CcUtils',
-      manifestFile: path.resolve(__dirname, '../src/manifest.json')      
+      manifestFile: path.resolve(__dirname, '../lib/manifest.json')      
     },
     plugins: [
       buble()
@@ -33,7 +33,7 @@ const configs = {
       banner,
       name: 'CcUtils',
       env: 'production',
-      manifestFile: path.resolve(__dirname, '../src/manifest.json')
+      manifestFile: path.resolve(__dirname, '../lib/manifest.json')
     },  
     plugins: [
       buble()
