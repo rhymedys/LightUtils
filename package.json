@@ -14,7 +14,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rhymedys/cc-utils.git"
+    "url": "git+https://github.com/rhymedys/lightUtils.git"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
