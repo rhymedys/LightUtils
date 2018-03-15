@@ -1,5 +1,5 @@
 {
-  "name": "cc-utils",
+  "name": "light-utils",
   "version": "0.0.1",
   "description": "common utils in web front end",
   "main": "src/index.js",

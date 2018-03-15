@@ -18,7 +18,7 @@ const configs = {
       file: path.resolve(__dirname, `../lib/${libName}-${version}.js`),
       format:'umd',
       banner,
-      name: 'CcUtils',
+      name: 'LightUtils',
       manifestFile: path.resolve(__dirname, '../lib/manifest.json')      
     },
     plugins: [
@@ -31,7 +31,7 @@ const configs = {
       file: path.resolve(__dirname, `../lib/${libName}-${version}.js`),
       format:'umd',
       banner,
-      name: 'CcUtils',
+      name: 'LightUtils',
       env: 'production',
       manifestFile: path.resolve(__dirname, '../lib/manifest.json')
     },  
