@@ -2,7 +2,7 @@
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-15 15:14:06
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-21 19:47:48
+ * @Last Modified time: 2018-03-15 12:53:58
  */
 
 //  PathUtils
@@ -12,6 +12,7 @@ import _getUrlPathByGrade from './utils/PathUtils/GetUrlPathByGrade'
 import _getURLProtocol from './utils/PathUtils/GetURLProtocol'
 import _getUrlQuery from './utils/PathUtils/GetUrlQuery'
 import _query2Json from './utils/PathUtils/Query2Json'
+import _removeProtocol from './utils/PathUtils/RemoveProtocol'
 
 
 // TimeUtils
@@ -50,6 +51,7 @@ export default {
   _getURLProtocol,
   _getUrlQuery,
   _query2Json,
+  _removeProtocol,
 
   // TimeUtils
   _injectDateFormatToDate,
