@@ -4,6 +4,10 @@ describe('PathUtils', () => {
   let test1 = 'https://github.com/karma-runner/karma?abc=123'
   let test2 = 'http://github.com/karma-runner/karma'
   let test3 = 'github.com/karma-runner/karma'
+  let jsonObj={
+    a:'1',
+    b:'2'
+  }
 
   it('can tell if a function _isUrl pass', () => {
     expect(utils._isUrl(test1)).toBe(true)
@@ -49,6 +53,10 @@ describe('PathUtils', () => {
   it('can tell if a function _getQueryValueByKey pass', () => {
     expect(utils._getQueryValueByKey(test1)).toBe(null)
     expect(utils._getQueryValueByKey(test1,"abc")).toBe('123')
+  })
+  
+  it('can tell if a function _tranJson2Query pass', () => {
+    expect(utils._tranJson2Query(jsonObj)).toBe('&a=1&b=2')
   })
 
 
