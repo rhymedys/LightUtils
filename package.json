@@ -1,8 +1,8 @@
 {
   "name": "light-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "common utils in web front end",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "directories": {
     "test": "test"
   },

@@ -15,7 +15,7 @@ const configs = {
   'dev': {
     input: path.resolve(__dirname, '../src/index.js'),
     output: {
-      file: path.resolve(__dirname, `../lib/${libName}-${version}.js`),
+      file: path.resolve(__dirname, `../lib/index.js`),
       format:'umd',
       banner,
       name: 'LightUtils',
@@ -28,7 +28,7 @@ const configs = {
   'production': {
     input: path.resolve(__dirname, '../src/index.js'),
     output: {
-      file: path.resolve(__dirname, `../lib/${libName}-${version}.js`),
+      file: path.resolve(__dirname, `../lib/index.js`),
       format:'umd',
       banner,
       name: 'LightUtils',
