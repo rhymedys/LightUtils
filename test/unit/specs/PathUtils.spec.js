@@ -63,7 +63,6 @@ describe('PathUtils', () => {
   it('can tell if a function _checkIsImgUrl pass', () => {
     expect(utils._checkIsImgUrl(test1)).toBe(false)
     expect(utils._checkIsImgUrl(test4)).toBe(true)
-
   })
 
 
