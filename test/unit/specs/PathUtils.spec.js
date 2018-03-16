@@ -4,6 +4,7 @@ describe('PathUtils', () => {
   let test1 = 'https://github.com/karma-runner/karma?abc=123'
   let test2 = 'http://github.com/karma-runner/karma'
   let test3 = 'github.com/karma-runner/karma'
+  let test4='https://sfault-avatar.b0.upaiyun.com/392/800/392800600-5457104157405_big64.png'
   let jsonObj={
     a:'1',
     b:'2'
@@ -57,6 +58,12 @@ describe('PathUtils', () => {
   
   it('can tell if a function _tranJson2Query pass', () => {
     expect(utils._tranJson2Query(jsonObj)).toBe('&a=1&b=2')
+  })
+
+  it('can tell if a function _checkIsImgUrl pass', () => {
+    expect(utils._checkIsImgUrl(test1)).toBe(false)
+    expect(utils._checkIsImgUrl(test4)).toBe(true)
+
   })
 
 
