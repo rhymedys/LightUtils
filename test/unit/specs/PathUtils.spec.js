@@ -36,13 +36,13 @@ describe('PathUtils', () => {
   })
 
   it('can tell if a function _query2Json pass', () => {
-    expect(utils._query2Json(test1).abc).toBe('123')
-    expect(utils._query2Json(test2).abc).toBe(undefined)
+    expect(utils._query2Json(utils._getUrlQuery(test1)).abc).toBe('123')
+    expect(utils._query2Json(utils._getUrlQuery(test2)).abc).toBe(undefined)
   })
-
 
   it('can tell if a function _removeProtocol pass', () => {
     expect(utils._removeProtocol(test1)).toBe('//github.com/karma-runner/karma?abc=123')
     expect(utils._removeProtocol(test2)).toBe('//github.com/karma-runner/karma')
   })
+
 })

@@ -2,11 +2,9 @@
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-16 16:49:10 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-18 10:34:42
+ * @Last Modified time: 2018-03-16 14:01:38
  */
-import _getUrlQuery from './GetUrlQuery'
-export default function _query2Json(strUrl) {
-  let query = _getUrlQuery(strUrl)
+export default function _query2Json(query) {
   const queryArray = query && query.split('&') || []
   const result = {}
   queryArray.forEach(val => {
