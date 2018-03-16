@@ -29,10 +29,11 @@ function build() {
     let manifest = {}
     bundle.modules.forEach((val) => {
       let filterAst = val.id.match(new RegExp(/\\utils\\(.*?).js/g))
-      if(filterAst){
-        let originKey=filterAst[0].substring(filterAst[0].lastIndexOf('\\')+1,filterAst[0].lastIndexOf('.'))
+      if (filterAst) {
+        let originKey = filterAst[0].substring(filterAst[0].lastIndexOf('\\') + 1, filterAst[0].lastIndexOf('.'))
+        originKey = '_' + originKey.substring(0, 1).toLowerCase() + originKey.substring(1, originKey.length)
 
-        manifest[originKey]=filterAst[0].substring(filterAst[0].indexOf('\\')+1,filterAst[0].length)        
+        manifest[originKey] = filterAst[0].substring(filterAst[0].indexOf('\\') + 1, filterAst[0].length)
       }
     })
 
