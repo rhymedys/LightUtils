@@ -45,4 +45,11 @@ describe('PathUtils', () => {
     expect(utils._removeProtocol(test2)).toBe('//github.com/karma-runner/karma')
   })
 
+  
+  it('can tell if a function _getQueryValueByKey pass', () => {
+    expect(utils._getQueryValueByKey(test1)).toBe(null)
+    expect(utils._getQueryValueByKey(test1,"abc")).toBe('123')
+  })
+
+
 })
