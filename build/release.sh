@@ -15,10 +15,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   
   git add -A
   git commit -m "[build] v$VERSION"
-  npm version $VERSION --message "[release] $VERSION"
+  # npm version $VERSION --message "[release] $VERSION"
 
   # publish
-  # git push eleme refs/tags/v$VERSION
-  # git push eleme master
+  git push origin refs/tags/v$VERSION
+  git push origin master
   # npm publish
 fi
