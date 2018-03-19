@@ -23,6 +23,7 @@
 -   [\_getDayByDate](#_getdaybydate)
 -   [\_getDateByTimestamp](#_getdatebytimestamp)
 -   [\_getCurrentDate](#_getcurrentdate)
+-   [\_checkObjType](#_checkobjtype)
 -   [\_getObjectType](#_getobjecttype)
 -   [\_generateGUID](#_generateguid)
 -   [\_generateUUID](#_generateuuid)
@@ -156,7 +157,7 @@ url的协议转换成当前访问的协议
 
 -   `formatType` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 返回类型 (optional, default `'yyyy-MM-dd hh:mm:ss'`)
 
-### 
+### \_checkObjType
 
 校验对象类型
 

@@ -380,12 +380,8 @@ function _getObjectType (obj) {
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-16 15:33:08 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-18 10:14:24
+ * @Last Modified time: 2018-03-19 22:03:30
  */
-function generateType(type) {
-  return ("[object " + type + "]")
-}
-
 var type = {
   String: generateType('String'),
   Array: generateType('Array'),
@@ -395,6 +391,16 @@ var type = {
   Date: generateType('Date'),
   Boolean: generateType('Boolean')
 };
+
+/**
+ * @private
+ * @description 
+ * @param {any} type 
+ * @returns 
+ */
+function generateType(type) {
+  return ("[object " + type + "]")
+}
 
 
 /**
