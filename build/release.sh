@@ -21,5 +21,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   # git push origin refs/tags/v$VERSION
   git tag -a $VERSION -m"[release] v$VERSION"
   git push
+  git push $VERSION
   npm publish
 fi
