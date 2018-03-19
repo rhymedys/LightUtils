@@ -1,5 +1,5 @@
+
 VERSION=`cat package.json|awk -F"[:]" '/version/{print $2}' | sed 's/\"//g' | sed 's/^[ \t]*//g' `
-echo $VERSION
 
 set -e
 
@@ -15,7 +15,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   
   git add -A
   git commit -m "[build] v$VERSION"
-  # npm version $VERSION --message "[release] $VERSION"
+  npm version $VERSION --message "[release] $VERSION"
 
   # publish
   # git push eleme refs/tags/v$VERSION
