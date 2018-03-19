@@ -33,7 +33,7 @@ function _replaceUrlProtocal2CurrentProtocal (strUrl, needProtocal) {
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-16 15:27:24 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-18 10:01:44
+ * @Last Modified time: 2018-03-19 15:25:30
  */
 
 /**
@@ -208,6 +208,22 @@ function _tranJson2Query(param, key, encode) {
     }
   }
   return paramStr
+}
+
+/*
+ * @Author: Rhymedys/Rhymedys@gmail.com 
+ * @Date: 2018-03-16 14:33:37 
+ * @Last Modified by: Rhymedys
+ * @Last Modified time: 2018-03-16 14:36:51
+ */
+
+/**
+ * 检测当前url是否是图片资源资质
+ * @param {*} strUrl 
+ */
+function _checkIsImgUrl(strUrl) {
+  var reg = /([^\s]+(?=\.(jpg|gif|png|jpeg))\.\2)/gi;
+  return !!strUrl.match(reg)
 }
 
 /*
@@ -625,7 +641,7 @@ function _convertImgToBase64(url, callback, outputFomat) {
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-15 15:14:06
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-16 14:25:18
+ * @Last Modified time: 2018-03-16 14:35:15
  */
 
 //  PathUtils
@@ -646,6 +662,7 @@ var index = {
   _removeProtocol: _removeProtocol,
   _getQueryValueByKey: _getQueryValueByKey,
   _tranJson2Query: _tranJson2Query,
+  _checkIsImgUrl: _checkIsImgUrl,
 
   // TimeUtils
   _injectDateFormatToDate: _injectDateFormatToDate,

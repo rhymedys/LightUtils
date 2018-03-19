@@ -15,11 +15,12 @@ const configs = {
   'dev': {
     input: path.resolve(__dirname, '../src/index.js'),
     output: {
-      file: path.resolve(__dirname, `../lib/index.js`),
+      file: path.resolve(__dirname, `../dist/${libName}-${version}.js`),
       format:'umd',
       banner,
       name: 'LightUtils',
-      manifestFile: path.resolve(__dirname, '../lib/manifest.json')      
+      manifestFile: path.resolve(__dirname, '../dist/manifest.json')  ,
+      libPath:path.resolve(__dirname,'../lib')    
     },
     plugins: [
       buble()
@@ -28,12 +29,13 @@ const configs = {
   'production': {
     input: path.resolve(__dirname, '../src/index.js'),
     output: {
-      file: path.resolve(__dirname, `../lib/index.js`),
+      file: path.resolve(__dirname, `../dist/${libName}-${version}.js`),
       format:'umd',
       banner,
       name: 'LightUtils',
       env: 'production',
-      manifestFile: path.resolve(__dirname, '../lib/manifest.json')
+      manifestFile: path.resolve(__dirname, '../dist/manifest.json'),
+      libPath:path.resolve(__dirname,'../lib')
     },  
     plugins: [
       buble()

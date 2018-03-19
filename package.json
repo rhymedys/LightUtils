@@ -1,6 +1,6 @@
 {
   "name": "light-utils",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "common utils in web front end",
   "main": "lib/index.js",
   "directories": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "node build/build.js",
-    "test:unit": "karma start build/karma.config.js"
+    "test": "karma start build/karma.config.js"
   },
   "author": "Rhymedys<Rhymedys@gmail.com>",
   "license": "MIT",

@@ -14,7 +14,7 @@ function blue(str) {
   return '\x1b[1m\x1b[34m' + str + '\x1b[39m\x1b[22m';
 }
 
-function write(dest, code) {
+function writeFile(dest, code) {
   return new Promise(function (resolve, reject) {
     fs.writeFile(dest, code, function (err) {
       if (err) return reject(err);
@@ -24,20 +24,72 @@ function write(dest, code) {
   });
 }
 
+/**
+ * 删除文件夹
+ * @param {*} path 
+ */
+function deleteAll(path) {  
+  let files = [];  
+  if(fs.existsSync(path)) {  
+      files = fs.readdirSync(path);  
+      files.forEach(function(file, index) {  
+          let curPath = path + "/" + file;  
+          if(fs.statSync(curPath).isDirectory()) { // recurse  
+            deleteAll(curPath);  
+          } else { // delete file  
+              fs.unlinkSync(curPath);  
+          }  
+      });  
+      fs.rmdirSync(path);  
+  }  
+};  
+
+/**
+ * 复制文件
+ * @param {*} source 
+ * @param {*} dest 
+ */
+function copyFile(source, dest) {
+  if (source && dest) {
+    let code=fs.readFileSync(source,'utf-8');
+
+      writeFile(dest,code)
+    
+  }
+}
+
+
 function build() {
+  // 清空旧资源
+  deleteAll(config.output.libPath)
+  deleteAll(path.join(__dirname,'../dist'))
+
+    
+  if(!fs.existsSync(config.output.libPath)) fs.mkdirSync(config.output.libPath)
+
+  if(!fs.existsSync(path.join(__dirname,'../dist'))) fs.mkdirSync(path.join(__dirname,'../dist'))
+
   rollup.rollup(config).then(bundle => {
     let manifest = {}
     bundle.modules.forEach((val) => {
       let filterAst = val.id.match(new RegExp(/\\utils\\(.*?).js/g))
       if (filterAst) {
         let originKey = filterAst[0].substring(filterAst[0].lastIndexOf('\\') + 1, filterAst[0].lastIndexOf('.'))
-        originKey = '_' + originKey.substring(0, 1).toLowerCase() + originKey.substring(1, originKey.length)
 
+
+
+        copyFile(`.\\src\\${filterAst}`,`${config.output.libPath}/${originKey}.js`)
+
+
+        // 清单key值
+        originKey = '_' + originKey.substring(0, 1).toLowerCase() + originKey.substring(1, originKey.length)
         manifest[originKey] = filterAst[0].substring(filterAst[0].indexOf('\\') + 1, filterAst[0].length)
+
+
       }
     })
 
-    write(config.output.manifestFile, JSON.stringify(manifest));
+    writeFile(config.output.manifestFile, JSON.stringify(manifest));
     return bundle.generate(config.output)
   }).then(({
     code
@@ -53,8 +105,8 @@ function build() {
     if (!fs.existsSync(libPath)) {
       fs.mkdirSync(libPath);
     }
-    write(config.output.file, code);
-    return write(config.output.file.replace(/\.js$/, '.min.js'), minified);
+    writeFile(config.output.file, code);
+    return writeFile(config.output.file.replace(/\.js$/, '.min.js'), minified);
   });
 }
 
