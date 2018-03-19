@@ -1,5 +1,5 @@
 
-VERSION=`cat package.json|awk -F"[:]" '/version/{print $2}' | sed 's/\"//g' | sed 's/^[ \t]*//g' `
+VERSION=`cat package.json|awk -F"[:]" '/version/{print $2}' | sed 's/\"//g' | sed 's/^[ \t]*//g' |sed 's/\(.*\).$/\1/g' `
 
 set -e
 
@@ -9,7 +9,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   echo "Releasing v$VERSION ..."
 
   # build
-   npm run build
+  #  npm run build
 
   # commit
   
@@ -19,6 +19,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
   # publish
   # git push origin refs/tags/v$VERSION
-  git push origin master
-  # npm publish
+  git tag -a $VERSION -m"[release] v$VERSION"
+  git push
+  npm publish
 fi
