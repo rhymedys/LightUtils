@@ -1,5 +1,5 @@
 /*
- * LIGHT-UTILS v0.0.6
+ * LIGHT-UTILS v0.0.7
  * (c) 2016-2018 Rhymedys<Rhymedys@gmail.com>
  * Released under the MIT license.
  */
@@ -297,15 +297,16 @@ function _getDayByDate (strDate) {
 }
 
 /*
- * @Author: Rhymedys/Rhymedys@gmail.com 
- * @Date: 2017-12-16 15:39:40 
+ * @Author: Rhymedys/Rhymedys@gmail.com
+ * @Date: 2017-12-16 15:39:40
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-18 10:02:41
+ * @Last Modified time: 2018-03-19 21:15:19
  */
 /**
+ * @private
  * @description 检查是否Date对象已经注入format，且进行回调
  * @param {function} cb 回调函数
- * @returns 
+ * @returns
  */
 function injectDateFormatToDateAndCallback(cb) {
   if (!Date.prototype.format) {
@@ -609,9 +610,10 @@ function _generateApiObjFromArr(apiDomain, apiArr) {
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-21 19:16:36 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-21 19:21:31
+ * @Last Modified time: 2018-03-19 21:15:10
  */
 /**
+ * @private
  * @description 压缩图片
  * @param {any} img 图片地址
  * @param {any} outputFomat 图片输出格式

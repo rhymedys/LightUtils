@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "node build/build.js",
+    "build": "node build/build.js && documentation readme ./src/index.js --section=API",
     "test": "karma start build/karma.config.js",
     "release": "bash build/release.sh"
   },
@@ -49,6 +49,7 @@
     "rollup-plugin-replace": "^2.0.0",
     "rollup-watch": "^4.0.0",
     "uglify-js": "^2.7.4",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "documentation":"^6.1.0"
   }
 }
