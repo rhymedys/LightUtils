@@ -1,4 +1,5 @@
 const path = require('path');
+const resolve=require('resolve')
 const buble = require('rollup-plugin-buble');
 const version = process.env.VERSION || require('../package.json').version;
 const libName=require('../package.json').name

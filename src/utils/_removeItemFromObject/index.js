@@ -2,9 +2,9 @@
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-16 16:24:03
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-18 13:46:37
+ * @Last Modified time: 2018-03-20 14:42:01
  */
-import _checkObjType from '../TypeUtils/CheckObjType'
+import _checkObjType from '../_checkObjType/index.js'
 
 export default function _removeItemFromObject(obj, arrKeysOrStrKey) {
   if (obj && _checkObjType(obj, type => type.Object) && arrKeysOrStrKey) {

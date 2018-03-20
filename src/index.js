@@ -2,49 +2,49 @@
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-15 15:14:06
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-16 14:35:15
+ * @Last Modified time: 2018-03-20 14:40:57
  */
 
 //  PathUtils
-import _replaceUrlProtocal2CurrentProtocal from './utils/PathUtils/ReplaceUrlProtocal2CurrentProtocal'
-import _isUrl from './utils/PathUtils/IsUrl'
-import _getUrlPathByGrade from './utils/PathUtils/GetUrlPathByGrade'
-import _getURLProtocol from './utils/PathUtils/GetURLProtocol'
-import _getUrlQuery from './utils/PathUtils/GetUrlQuery'
-import _query2Json from './utils/PathUtils/Query2Json'
-import _removeProtocol from './utils/PathUtils/RemoveProtocol'
-import _getQueryValueByKey from './utils/PathUtils/GetQueryValueByKey'
-import _tranJson2Query from './utils/PathUtils/TranJson2Query'
-import _checkIsImgUrl from './utils/PathUtils/CheckIsImgUrl'
+import _replaceUrlProtocal2CurrentProtocal from './utils/_replaceUrlProtocal2CurrentProtocal/index.js'
+import _isUrl from './utils/_isUrl/index.js'
+import _getUrlPathByGrade from './utils/_getUrlPathByGrade/index.js'
+import _getURLProtocol from './utils/_getURLProtocol/index.js'
+import _getUrlQuery from './utils/_getUrlQuery/index.js'
+import _query2Json from './utils/_query2Json/index.js'
+import _removeProtocol from './utils/_removeProtocol/index.js'
+import _getQueryValueByKey from './utils/_getQueryValueByKey/index.js'
+import _tranJson2Query from './utils/_tranJson2Query/index.js'
+import _checkIsImgUrl from './utils/_checkIsImgUrl/index.js'
 
 
 // TimeUtils
-import _injectDateFormatToDate from './utils/TimeUtils/InjectDateFormatToDate'
-import _getWeekDayByDate from './utils/TimeUtils/GetWeekDayByDate'
-import _getDayByDate from './utils/TimeUtils/GetDayByDate'
-import _getDateByTimestamp from './utils/TimeUtils/GetDateByTimestamp'
-import _getCurrentDate from './utils/TimeUtils/GetCurrentDate'
+import _injectDateFormatToDate from './utils/_injectDateFormatToDate/index.js'
+import _getWeekDayByDate from './utils/_getWeekDayByDate/index.js'
+import _getDayByDate from './utils/_getDayByDate/index.js'
+import _getDateByTimestamp from './utils/_getDateByTimestamp/index.js'
+import _getCurrentDate from './utils/_getCurrentDate/index.js'
 
 //  TypeUtils
-import _checkObjType from './utils/TypeUtils/CheckObjType'
-import _getObjectType from './utils/TypeUtils/GetObjectType'
+import _checkObjType from './utils/_checkObjType/index.js'
+import _getObjectType from './utils/_getObjectType/index.js'
 
 // ObjectUtils
-import _removeItemFromObject from './utils/ObjectUtils/RemoveItemFromObj'
+import _removeItemFromObject from './utils/_removeItemFromObject/index.js'
 
 // SysUtils
-import _getUserAgent from './utils/SysUtils/GetUserAgent'
-import _generateGUID from './utils/SysUtils/GenerateGUID'
-import _generateUUID from './utils/SysUtils/GenerateUUID'
-import _isColor from './utils/SysUtils/IsColor'
-import _isIdentity from './utils/SysUtils/IsIdentity'
-import _isPhoneNum from './utils/SysUtils/IsPhoneNum'
+import _getUserAgent from './utils/_getUserAgent/index.js'
+import _generateGUID from './utils/_generateGUID/index.js'
+import _generateUUID from './utils/_generateUUID/index.js'
+import _isColor from './utils/_isColor/index.js'
+import _isIdentity from './utils/_isIdentity/index.js'
+import _isPhoneNum from './utils/_isPhoneNum/index.js'
 
 //  ApiUtils
-import _generateApiObjFromArr from './utils/ApiUtils/GenerateApiObjByArr'
+import _generateApiObjFromArr from './utils/_generateApiObjFromArr/index.js'
 
 // ImgUtils
-import _converImgToBase64 from './utils/ImgUtils/ConvertImgToBase64'
+import _convertImgToBase64 from './utils/_convertImgToBase64/index.js'
 
 export default {
   // PathUtils
@@ -85,5 +85,5 @@ export default {
   _generateApiObjFromArr,
 
   // ImgUtils
-  _converImgToBase64
+  _convertImgToBase64
 }

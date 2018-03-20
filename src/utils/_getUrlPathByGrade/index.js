@@ -2,10 +2,10 @@
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-16 15:27:01 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-18 10:01:32
+ * @Last Modified time: 2018-03-20 14:41:38
  */
 
-import _isUrl from './IsUrl'
+import _isUrl from '../_isUrl/index.js'
 
   /**
  * @description 获取自定义级数的路径

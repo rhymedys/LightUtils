@@ -2,9 +2,9 @@
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-16 15:39:40
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-19 21:15:19
+ * @Last Modified time: 2018-03-20 14:41:50
  */
-import _injectDateFormatToDate from './InjectDateFormatToDate'
+import _injectDateFormatToDate from '../_injectDateFormatToDate/index.js'
 
 /**
  * @private

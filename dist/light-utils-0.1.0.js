@@ -1,5 +1,5 @@
 /*
- * LIGHT-UTILS v0.0.9
+ * LIGHT-UTILS v0.1.0
  * (c) 2016-2018 Rhymedys<Rhymedys@gmail.com>
  * Released under the MIT license.
  */
@@ -48,7 +48,7 @@ function _isUrl(str) {
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-16 15:27:01 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-18 10:01:32
+ * @Last Modified time: 2018-03-20 14:41:38
  */
 
 /**
@@ -79,7 +79,7 @@ function _getUrlPathByGrade(strUrl, grade) {
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-16 16:10:16
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-16 14:20:10
+ * @Last Modified time: 2018-03-20 14:41:39
  */
 
  /**
@@ -159,7 +159,7 @@ function _removeProtocol(strUrl) {
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2018-03-16 14:07:54 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-16 14:20:56
+ * @Last Modified time: 2018-03-20 14:41:35
  */
 
 /**
@@ -230,7 +230,7 @@ function _checkIsImgUrl(strUrl) {
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-16 15:37:02
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-18 10:02:37
+ * @Last Modified time: 2018-03-20 14:10:50
  */
 
 /**
@@ -300,7 +300,7 @@ function _getDayByDate (strDate) {
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-16 15:39:40
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-19 21:15:19
+ * @Last Modified time: 2018-03-20 14:41:50
  */
 /**
  * @private
@@ -319,7 +319,7 @@ function injectDateFormatToDateAndCallback(cb) {
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-16 15:45:00 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-18 10:04:50
+ * @Last Modified time: 2018-03-20 14:12:42
  */
 
 var defaultDateFormatType = 'yyyy-MM-dd hh:mm:ss';
@@ -328,7 +328,7 @@ var defaultDateFormatType = 'yyyy-MM-dd hh:mm:ss';
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-16 15:42:20 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-18 20:24:38
+ * @Last Modified time: 2018-03-20 14:41:26
  */
 /**
  * @description 将时间戳转换成标准日期
@@ -344,7 +344,7 @@ function  _getDateByTimestamp (numTimestamp, formatType) {
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-16 15:40:58
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-18 20:24:48
+ * @Last Modified time: 2018-03-20 14:41:21
  */
 
 /**
@@ -380,7 +380,7 @@ function _getObjectType (obj) {
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-16 15:33:08 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-19 22:03:30
+ * @Last Modified time: 2018-03-20 14:41:07
  */
 var type = {
   String: generateType('String'),
@@ -419,7 +419,7 @@ function generateType(type) {
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-16 16:24:03
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-18 13:46:37
+ * @Last Modified time: 2018-03-20 14:42:01
  */
 function _removeItemFromObject(obj, arrKeysOrStrKey) {
   if (obj && _checkObjType(obj, function (type) { return type.Object; }) && arrKeysOrStrKey) {
@@ -543,7 +543,7 @@ function _generateUUID(len, radix) {
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-21 19:22:27 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2017-12-21 19:42:50
+ * @Last Modified time: 2018-03-20 14:41:50
  */
 
 /**
@@ -649,7 +649,7 @@ function _convertImgToBase64(url, callback, outputFomat) {
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-15 15:14:06
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-16 14:35:15
+ * @Last Modified time: 2018-03-20 14:40:57
  */
 
 //  PathUtils
@@ -698,7 +698,7 @@ var index = {
   _generateApiObjFromArr: _generateApiObjFromArr,
 
   // ImgUtils
-  _converImgToBase64: _convertImgToBase64
+  _convertImgToBase64: _convertImgToBase64
 }
 
 return index;

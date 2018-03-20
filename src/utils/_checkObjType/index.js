@@ -2,9 +2,9 @@
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2017-12-16 15:33:08 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-19 22:03:30
+ * @Last Modified time: 2018-03-20 14:41:07
  */
-import _getObjectType from './GetObjectType'
+import _getObjectType from '../_getObjectType/index.js'
 
 
 const type = {
