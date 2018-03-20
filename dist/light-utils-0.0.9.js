@@ -1,5 +1,5 @@
 /*
- * LIGHT-UTILS v0.0.8
+ * LIGHT-UTILS v0.0.9
  * (c) 2016-2018 Rhymedys<Rhymedys@gmail.com>
  * Released under the MIT license.
  */

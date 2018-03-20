@@ -78,7 +78,8 @@ function build() {
         originKey = '_' + originKey.substring(0, 1).toLowerCase() + originKey.substring(1, originKey.length)
 
         // 生成lib
-        copyFile(`.\\src\\${filterAst}`,`${config.output.libPath}/${originKey}.js`)
+        if(!fs.existsSync(`${config.output.libPath}/${originKey}`)) fs.mkdirSync(`${config.output.libPath}/${originKey}`)
+        copyFile(`.\\src\\${filterAst}`,`${config.output.libPath}/${originKey}/index.js`)
         // 生成清单
         manifest[originKey] = filterAst[0].substring(filterAst[0].indexOf('\\') + 1, filterAst[0].length)
 
