@@ -75,14 +75,11 @@ function build() {
       let filterAst = val.id.match(new RegExp(/\\utils\\(.*?).js/g))
       if (filterAst) {
         let originKey = filterAst[0].substring(filterAst[0].lastIndexOf('\\') + 1, filterAst[0].lastIndexOf('.'))
-
-
-
-        copyFile(`.\\src\\${filterAst}`,`${config.output.libPath}/${originKey}.js`)
-
-
-        // 清单key值
         originKey = '_' + originKey.substring(0, 1).toLowerCase() + originKey.substring(1, originKey.length)
+
+        // 生成lib
+        copyFile(`.\\src\\${filterAst}`,`${config.output.libPath}/${originKey}.js`)
+        // 生成清单
         manifest[originKey] = filterAst[0].substring(filterAst[0].indexOf('\\') + 1, filterAst[0].length)
 
 
