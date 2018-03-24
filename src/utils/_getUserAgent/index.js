@@ -2,7 +2,7 @@
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-16 17:02:07
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-15 13:14:23
+ * @Last Modified time: 2018-03-24 23:22:52
  */
 
 export default function _getUserAgent () {
@@ -22,6 +22,7 @@ export default function _getUserAgent () {
     qq: u.match(/\sQQ/i) == ' qq', // 是否QQ
     mydoctor: u.indexOf('Mydoctor') > -1,
     wechatdevtools: u.indexOf('wechatdevtools') > -1,
-    kingdeeHit: u.indexOf('KingdeeHit') > -1 
+    kingdeeHit: u.indexOf('KingdeeHit') > -1 ,
+    alipayClient: u.indexOf('AlipayClient') > -1 // 支付宝
   }
 }
