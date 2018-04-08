@@ -2,7 +2,7 @@
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2018-04-08 20:37:57
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-04-08 20:40:15
+ * @Last Modified time: 2018-04-08 20:50:13
  */
 
 /**
@@ -11,7 +11,7 @@
  * @param {any} el 结点对象 
  * @returns 距离
  */
-export default function _getEl2DocumentDIstance(el) {
+export default function _getEl2DocumentDistance(el) {
   let res=0
   if (el) {
     let tempObj = obj;
