@@ -419,7 +419,15 @@ function generateType(type) {
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-16 16:24:03
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-20 14:42:01
+ * @Last Modified time: 2018-04-08 20:46:06
+ */
+
+/**
+ * @description 移除对象的指定属性
+ * @export
+ * @param {any} obj 被移除属性的对象
+ * @param {any} arrKeysOrStrKey 移除的属性key或key值数组
+ * @returns 
  */
 function _removeItemFromObject(obj, arrKeysOrStrKey) {
   if (obj && _checkObjType(obj, function (type) { return type.Object; }) && arrKeysOrStrKey) {
@@ -450,10 +458,15 @@ function _removeItemFromObject(obj, arrKeysOrStrKey) {
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-16 17:02:07
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-15 13:14:23
+ * @Last Modified time: 2018-04-08 20:47:42
  */
 
-function _getUserAgent () {
+/**
+ * @description 获取浏览器代理信息
+ * @export
+ * @returns 常用的代理对象  trident，presto，webKit，gecko，mobile，ios，android，iPhone，iPad，webApp，weixin，qq，mydoctor，wechatdevtools，kingdeeHit，alipayClient
+ */
+function _getUserAgent() {
   var u = navigator.userAgent;
   return {
     trident: u.indexOf('Trident') > -1, // IE内核
@@ -470,7 +483,8 @@ function _getUserAgent () {
     qq: u.match(/\sQQ/i) == ' qq', // 是否QQ
     mydoctor: u.indexOf('Mydoctor') > -1,
     wechatdevtools: u.indexOf('wechatdevtools') > -1,
-    kingdeeHit: u.indexOf('KingdeeHit') > -1 
+    kingdeeHit: u.indexOf('KingdeeHit') > -1,
+    alipayClient: u.indexOf('AlipayClient') > -1 // 支付宝
   }
 }
 
@@ -647,9 +661,34 @@ function _convertImgToBase64(url, callback, outputFomat) {
 
 /*
  * @Author: Rhymedys/Rhymedys@gmail.com
+ * @Date: 2018-04-08 20:37:57
+ * @Last Modified by: Rhymedys
+ * @Last Modified time: 2018-04-08 20:40:15
+ */
+
+/**
+ * @description 获取当前结点到文档上边距的距离
+ * @export 
+ * @param {any} el 结点对象 
+ * @returns 距离
+ */
+function _getEl2DocumentDIstance(el) {
+  var res=0;
+  if (el) {
+    var tempObj = obj;
+    while (tempObj) {
+      res += tempObj.offsetTop;
+      tempObj = tempObj.offsetParent;
+    }
+  }
+  return res
+}
+
+/*
+ * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-15 15:14:06
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-20 14:40:57
+ * @Last Modified time: 2018-04-08 20:45:01
  */
 
 //  PathUtils
@@ -659,6 +698,7 @@ function _convertImgToBase64(url, callback, outputFomat) {
 // SysUtils
 //  ApiUtils
 // ImgUtils
+// ElUtils
 var index = {
   // PathUtils
   _replaceUrlProtocal2CurrentProtocal: _replaceUrlProtocal2CurrentProtocal,
@@ -698,7 +738,10 @@ var index = {
   _generateApiObjFromArr: _generateApiObjFromArr,
 
   // ImgUtils
-  _convertImgToBase64: _convertImgToBase64
+  _convertImgToBase64: _convertImgToBase64,
+
+  // ElUtils  
+  _getEl2DocumentDIstance: _getEl2DocumentDIstance
 }
 
 return index;

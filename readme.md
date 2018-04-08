@@ -44,6 +44,8 @@ Via .babelrc or babel-loader.
 -   [\_getCurrentDate](#_getcurrentdate)
 -   [\_checkObjType](#_checkobjtype)
 -   [\_getObjectType](#_getobjecttype)
+-   [\_removeItemFromObject](#_removeitemfromobject)
+-   [\_getUserAgent](#_getuseragent)
 -   [\_generateGUID](#_generateguid)
 -   [\_generateUUID](#_generateuuid)
 -   [\_isColor](#_iscolor)
@@ -51,6 +53,7 @@ Via .babelrc or babel-loader.
 -   [\_isPhone](#_isphone)
 -   [\_generateApiObjFromArr](#_generateapiobjfromarr)
 -   [\_convertImgToBase64](#_convertimgtobase64)
+-   [\_getEl2DocumentDIstance](#_getel2documentdistance)
 
 ### \_replaceUrlProtocal2CurrentProtocal
 
@@ -193,6 +196,21 @@ url的协议转换成当前访问的协议
 
 -   `obj` **any** 
 
+### \_removeItemFromObject
+
+移除对象的指定属性
+
+**Parameters**
+
+-   `obj` **any** 被移除属性的对象
+-   `arrKeysOrStrKey` **any** 移除的属性key或key值数组
+
+### \_getUserAgent
+
+获取浏览器代理信息
+
+Returns **any** 常用的代理对象  trident，presto，webKit，gecko，mobile，ios，android，iPhone，iPad，webApp，weixin，qq，mydoctor，wechatdevtools，kingdeeHit，alipayClient
+
 ### \_generateGUID
 
 生成GUID
@@ -248,3 +266,13 @@ url的协议转换成当前访问的协议
 -   `url` **any** 图片地址
 -   `callback` **any** 转化成功后的回调函数
 -   `outputFomat` **any** 图片输出格式
+
+### \_getEl2DocumentDIstance
+
+获取当前结点到文档上边距的距离
+
+**Parameters**
+
+-   `el` **any** 结点对象
+
+Returns **any** 距离

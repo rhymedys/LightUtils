@@ -2,10 +2,15 @@
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-16 17:02:07
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-24 23:22:52
+ * @Last Modified time: 2018-04-08 20:47:42
  */
 
-export default function _getUserAgent () {
+/**
+ * @description 获取浏览器代理信息
+ * @export
+ * @returns 常用的代理对象  trident，presto，webKit，gecko，mobile，ios，android，iPhone，iPad，webApp，weixin，qq，mydoctor，wechatdevtools，kingdeeHit，alipayClient
+ */
+export default function _getUserAgent() {
   const u = navigator.userAgent
   return {
     trident: u.indexOf('Trident') > -1, // IE内核
@@ -22,7 +27,7 @@ export default function _getUserAgent () {
     qq: u.match(/\sQQ/i) == ' qq', // 是否QQ
     mydoctor: u.indexOf('Mydoctor') > -1,
     wechatdevtools: u.indexOf('wechatdevtools') > -1,
-    kingdeeHit: u.indexOf('KingdeeHit') > -1 ,
+    kingdeeHit: u.indexOf('KingdeeHit') > -1,
     alipayClient: u.indexOf('AlipayClient') > -1 // 支付宝
   }
 }

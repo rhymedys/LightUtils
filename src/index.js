@@ -2,7 +2,7 @@
  * @Author: Rhymedys/Rhymedys@gmail.com
  * @Date: 2017-12-15 15:14:06
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-20 14:40:57
+ * @Last Modified time: 2018-04-08 20:45:01
  */
 
 //  PathUtils
@@ -46,6 +46,9 @@ import _generateApiObjFromArr from './utils/_generateApiObjFromArr/index.js'
 // ImgUtils
 import _convertImgToBase64 from './utils/_convertImgToBase64/index.js'
 
+// ElUtils
+import _getEl2DocumentDIstance from './utils/_getEl2DocumentDIstance/index.js'  
+
 export default {
   // PathUtils
   _replaceUrlProtocal2CurrentProtocal,
@@ -85,5 +88,8 @@ export default {
   _generateApiObjFromArr,
 
   // ImgUtils
-  _convertImgToBase64
+  _convertImgToBase64,
+
+  // ElUtils  
+  _getEl2DocumentDIstance
 }
