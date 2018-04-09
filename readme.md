@@ -4,7 +4,7 @@
 
 ## 安装
 
-     npm light-utils --save
+     npm i light-utils --save
 
 ## 按需引入方式
 
