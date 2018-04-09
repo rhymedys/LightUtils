@@ -2,8 +2,9 @@
  * @Author: Rhymedys/Rhymedys@gmail.com 
  * @Date: 2018-03-16 14:22:28 
  * @Last Modified by: Rhymedys
- * @Last Modified time: 2018-03-16 14:26:57
+ * @Last Modified time: 2018-04-09 22:58:09
  */
+import _checkObjType from '../_checkObjType/index.js'
 
 /**
  * 将json对象转化为Query字符窜
@@ -25,7 +26,7 @@ export default function _tranJson2Query(param, key, encode) {
     for (const i in param) {
       const k = key == null ?
         i :
-        key + (param instanceof Array ?
+        key + (_checkObjType(param,type=>type.Array) ?
           `[${i}]` :
           `.${i}`)
       paramStr += _tranJson2Query(param[i], k, encode)
