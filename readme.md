@@ -2,9 +2,13 @@
 
 -   一个轻量的常用工具库
 
+## 安装
+
+     npm light-utils --save
+
 ## 按需引入方式
 
-### Install
+### Install 
 
 Install [light-babel-import](https://github.com/rhymedys/LightUtilsBabelPluginImport)
 
